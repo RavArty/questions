@@ -12,6 +12,7 @@ const sagaMiddleware = createSagaMiddleware()
 const middlewares = [sagaMiddleware];
 
 //create-react has node environment
+console.log('dev: ', process.env.NODE_ENV)
 if(process.env.NODE_ENV === 'development'){
   middlewares.push(logger)
 }
